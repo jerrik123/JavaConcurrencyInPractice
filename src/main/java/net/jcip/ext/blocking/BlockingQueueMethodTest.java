@@ -30,7 +30,7 @@ public class BlockingQueueMethodTest {
 	public static void main(String[] args) throws InterruptedException {
 		// putAndTakeFromArrayBlockingQueue();
 		// addFromArrayBlockingQueue();
-		// pollFromArrayBlockingQueue();
+		 pollFromArrayBlockingQueue();
 		//peekFromArrayBlockingQueue();
 	}
 
@@ -62,7 +62,7 @@ public class BlockingQueueMethodTest {
 			public void run() {
 				for (int i = 1; i < 2; i++) {
 					try {
-						TimeUnit.SECONDS.sleep(2);
+						TimeUnit.SECONDS.sleep(1);
 						blockingQueue.put(i);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
