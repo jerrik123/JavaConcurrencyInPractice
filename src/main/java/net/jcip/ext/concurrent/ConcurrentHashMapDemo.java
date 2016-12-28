@@ -6,7 +6,12 @@ public class ConcurrentHashMapDemo {
 
 	public static void main(String[] args) {
 		ConcurrentHashMap<String, String> concurrentMap = new ConcurrentHashMap<String, String>();
-		concurrentMap.put("hello", "world");
+		for(int i=0;i<100;i++){
+			concurrentMap.put("hello_" + i, "world_" + i);
+		}
+		
+		concurrentMap.put("hello_1", "another");
+		
 		System.out.println(concurrentMap);
 	}
 
